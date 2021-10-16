@@ -22,7 +22,7 @@ import javax.swing.border.LineBorder;
 public class Program {
 
 	private JFrame mainFrame;
-	private JTextField txtName;
+	private JTextField txtTen;
 	JLabel lblNhapTen;
 	JButton btnThemTen;
 	JTextArea textDSHienThi;
@@ -33,7 +33,7 @@ public class Program {
 	ArrayList<String> nameList;
 	
 	private JLabel lblTimTen;
-	private JTextField txtToSearch;
+	private JTextField txtTimTen;
 	private JButton btnTimTen;
 	private JTextArea textDSThem;
 
@@ -74,17 +74,17 @@ public class Program {
 		lblNhapTen.setBounds(69, 26, 109, 25);
 		mainFrame.getContentPane().add(lblNhapTen);
 
-		txtName = new JTextField();
-		txtName.addKeyListener(new KeyAdapter() {
+		txtTen = new JTextField();
+		txtTen.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				lblStatusLabel.setText("Đang chờ nhập tên...");
 				lblStatusLabel.setVisible(true);
 			}
 		});
-		txtName.setBounds(204, 26, 396, 27);
-		mainFrame.getContentPane().add(txtName);
-		txtName.setColumns(10);
+		txtTen.setBounds(204, 26, 396, 27);
+		mainFrame.getContentPane().add(txtTen);
+		txtTen.setColumns(10);
 
 		nameList = new ArrayList<String>();
 
@@ -136,10 +136,10 @@ public class Program {
 		lblTimTen.setBounds(69, 99, 109, 25);
 		mainFrame.getContentPane().add(lblTimTen);
 
-		txtToSearch = new JTextField();
-		txtToSearch.setColumns(10);
-		txtToSearch.setBounds(204, 94, 396, 32);
-		mainFrame.getContentPane().add(txtToSearch);
+		txtTimTen = new JTextField();
+		txtTimTen.setColumns(10);
+		txtTimTen.setBounds(204, 94, 396, 32);
+		mainFrame.getContentPane().add(txtTimTen);
 
 		btnTimTen = new JButton("Tìm Tên");
 		btnTimTen.addActionListener(new ActionListener() {
@@ -158,9 +158,9 @@ public class Program {
 	}
 
 	void ThemVaoDS(ArrayList<String> arr) {
-		String name = txtName.getText();
+		String name = txtTen.getText();
 		arr.add(name);
-		txtName.setText("");
+		txtTen.setText("");
 
 		lblStatusLabel.setText("Thêm tên thành công!");
 		lblStatusLabel.setVisible(true);
@@ -189,7 +189,7 @@ public class Program {
 	}
 
 	void TimTen(ArrayList<String> arr) {
-		String toSearch = txtToSearch.getText();
+		String toSearch = txtTimTen.getText();
 		String nameFound = "";
 		int count = 0;
 		for (String element : arr) {
