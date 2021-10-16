@@ -212,8 +212,8 @@ public class Program {
 
 	}
 	
-	void ThongBaoLoi(String msg, String title, int msgType) {
+	void ThongBaoLoi(String msg, String title, int Loaimsg) {
 		JFrame frame = new JFrame("JDialog");
-		JOptionPane.showMessageDialog(frame, msg, title, msgType);
+		JOptionPane.showMessageDialog(frame, msg, title, Loaimsg);
 	}
 }
