@@ -187,8 +187,6 @@ public class Program {
 		}
 	}
 
-
-
 	void XoaDS(ArrayList<String> arr) {
 		textDSHienThi.setText("");
 		textDSThem.setText("");
