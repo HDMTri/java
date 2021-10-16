@@ -59,7 +59,6 @@ public class Program {
 	public Program() {
 		initialize();
 	}
-
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -160,7 +159,6 @@ public class Program {
 
 	void ThemVaoDS(ArrayList<String> arr) {
 		String name = txtName.getText();
-
 		arr.add(name);
 		txtName.setText("");
 
@@ -171,15 +169,12 @@ public class Program {
 
 		for (int i = 0; i < arr.size(); i++) {
 			String element = arr.get(i);
-
 			textDSThem.append(element + "\n");
 		}
 	}
 
 	void HienThiDS(ArrayList<String> arr) {
 		textDSHienThi.setText("");
-
-		// For loop iteration
 		for (int i = 0; i < arr.size(); i++) {
 			String element = arr.get(i);
 
@@ -197,14 +192,12 @@ public class Program {
 		String toSearch = txtToSearch.getText();
 		String nameFound = "";
 		int count = 0;
-
 		for (String element : arr) {
 			if (element.contains(toSearch)) {
 				nameFound += element + "\n";
 				count++;
 			}
 		}
-
 		if (count == 0)
 			ThongBaoLoi("Tên không được tìm thấy!", "Không tìm được trong danh sách!", JOptionPane.ERROR_MESSAGE);
 		else
