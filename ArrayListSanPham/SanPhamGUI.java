@@ -145,7 +145,7 @@ public class SanPhamGUI {
 			textAreaProdList.setBorder(new LineBorder(new Color(0, 0, 0)));
 			textAreaProdList.setFont(new Font("Monospaced", Font.PLAIN, 14));
 			textAreaProdList.setBounds(35, 240, 747, 242);
-			textAreaProdList.setText("Mã --- Tên --- Giá\n");
+			textAreaProdList.setText("Mã sản phẩm --- Tên sản phẩm--- Giá sản phẩm\n");
 			
 			mainFrame.getContentPane().add(textAreaProdList);
 		}
