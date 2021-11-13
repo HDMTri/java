@@ -50,15 +50,15 @@ public class Cau2 extends JFrame {
 		contentPane.add(lbltitle);
 		
 		JLabel lblA = new JLabel("Nhap A");
-		lblA.setBounds(73, 67, 46, 14);
+		lblA.setBounds(60, 68, 46, 14);
 		contentPane.add(lblA);
 		
 		JLabel lblB = new JLabel("Nhap B");
-		lblB.setBounds(73, 93, 46, 14);
+		lblB.setBounds(60, 93, 46, 14);
 		contentPane.add(lblB);
 		
 		JLabel lblC = new JLabel("Nhap C");
-		lblC.setBounds(73, 118, 46, 14);
+		lblC.setBounds(60, 121, 46, 14);
 		contentPane.add(lblC);
 		
 		textA = new JTextField();
@@ -78,7 +78,7 @@ public class Cau2 extends JFrame {
 		
 		
 		JLabel lblKQ = new JLabel("Ket Qua");
-		lblKQ.setBounds(73, 143, 46, 14);
+		lblKQ.setBounds(60, 149, 46, 14);
 		contentPane.add(lblKQ);
 		
 		JTextPane KQ = new JTextPane();
@@ -99,15 +99,15 @@ public class Cau2 extends JFrame {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						String SoA = textA.getText();	
-						String SoB = textB.getText();	
-						String SoC = textC.getText();	
+						String A = textA.getText();	
+						String B = textB.getText();	
+						String C = textC.getText();	
 						
 						int a,b,c;
-						double delta,da1,da2;
+						double kq,x1,x2;
 						try
 						{
-							a = Integer.parseInt(SoA);
+							a = Integer.parseInt(A);
 						}
 						catch (Exception ex)
 						{
@@ -116,7 +116,7 @@ public class Cau2 extends JFrame {
 						}
 						try
 						{
-							b = Integer.parseInt(SoB);
+							b = Integer.parseInt(B);
 						}
 						catch (Exception ex)
 						{
@@ -125,14 +125,14 @@ public class Cau2 extends JFrame {
 						}
 						try
 						{
-							c = Integer.parseInt(SoC);
+							c = Integer.parseInt(C);
 						}
 						catch (Exception ex)
 						{
 							c = 0;
 							textC.setText(String.valueOf(c));
 						}
-						delta = (b*b) - 4*a*c;
+						kq = (b*b) - 4*a*c;
 						if (a==0) 
 						{
 							X1.setText("Vo nghiem");
@@ -140,25 +140,25 @@ public class Cau2 extends JFrame {
 						}
 						else
 						{
-							KQ.setText(String.valueOf(delta));
-							if (delta<0)
+							KQ.setText(String.valueOf(kq));
+							if (kq<0)
 							{
 								X1.setText("Vo nghiem");
 								X2.setText("Vo nghiem");
 							}
-							else if (delta==0)
+							else if (kq==0)
 							{
-								da1= -(b/(2*a));
-								da2= -(b/(2*a));
-								X1.setText(String.valueOf(da1));
-								X2.setText(String.valueOf(da2));
+								x1= -(b/(2*a));
+								x2= -(b/(2*a));
+								X1.setText(String.valueOf(x1));
+								X2.setText(String.valueOf(x2));
 							}
 							else
 							{
-								da1 = (-b + Math.sqrt(delta))/2*a;
-								da2 = (-b - Math.sqrt(delta))/2*a;
-								X1.setText(String.valueOf(da1));
-								X2.setText(String.valueOf(da2));
+								x1 = (-b + Math.sqrt(kq))/2*a;
+								x2 = (-b - Math.sqrt(kq))/2*a;
+								X1.setText(String.valueOf(x1));
+								X2.setText(String.valueOf(x2));
 							}
 						}
 					}		
